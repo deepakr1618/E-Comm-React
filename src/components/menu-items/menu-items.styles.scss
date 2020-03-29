@@ -13,7 +13,7 @@ $animation-speed:1s;
       cursor: pointer;
 
       & .background-image{
-        transform: scale(1.1) translateX(-5px);
+        transform:  translateX(-5px);
         transition:transform ($animation-speed) ease-out;
       }
       & .content{
