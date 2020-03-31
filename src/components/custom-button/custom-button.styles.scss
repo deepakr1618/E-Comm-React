@@ -1,0 +1,33 @@
+$theme-color : rgb(22, 22, 22);
+$google-blue : rgb(88, 88, 255);
+.custom-button {
+    min-width: 165px;
+    width: auto;
+    height:40px;
+    padding: 0 35px 0 35px;
+    font-size: 15px;
+    background-color: $theme-color;
+    color: white;
+    text-transform: uppercase;
+    font-weight: normal;
+    border: 2px solid $theme-color;
+    cursor: pointer;
+    transition: 300ms ease all;
+    border-radius: 7px;
+
+    &:hover {
+      background-color: white;
+      color: $theme-color;
+      border: 2px solid $theme-color;
+    }
+    &.google-sign-in{
+      background:$google-blue;
+      border:2px solid $google-blue;
+      &:hover {
+        background-color: white;
+        color: $google-blue;
+        border: 2px solid $google-blue;
+      }
+    }
+  }
+  
