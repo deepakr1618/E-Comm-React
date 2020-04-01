@@ -3,10 +3,10 @@ $main-color: black;
 $text-color: rgb(29, 29, 29);
 
 @mixin shrinkLabel {
-  top: -7px;
+  top: 5px;
   left:8px;
   padding: 0px 7px;
-  font-size: 12px;
+  font-size: 10px;
   background: $sub-color;
   color:white;
   border-radius: 99px;
@@ -21,17 +21,17 @@ $text-color: rgb(29, 29, 29);
     background-color: white;
     color: $text-color;
     font-size: 15px;
-    padding: 15px 10px 15px 10px;
+    padding: 25px 10px 15px 10px;
     display: block;
     width: 100%;
     border: none;
     border-radius: 7px;
-    border: 2px solid $text-color;
+    border: 1px solid $text-color;
     margin: 25px 0;
 
     &:focus {
       outline: none;
-      border:2px solid $sub-color;
+      border:1px solid $sub-color;
     }
 
     &:focus + .form-input-label {
@@ -50,7 +50,7 @@ $text-color: rgb(29, 29, 29);
     position: absolute;
     pointer-events: none;
     left: 15px;
-    top: 15px;
+    top: 20px;
     transition: 300ms ease all;
 
     &.shrink {
