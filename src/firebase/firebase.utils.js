@@ -23,6 +23,12 @@ export const createUserProfileDocument = async (userAuth , additionalData) => {
   const createdAt = new Date()
   if(!snapshot.exists){
     try{
+      console.log({
+        displayName,
+        email,
+        createdAt,
+        ...additionalData
+      })
       userRef.set({
         displayName,
         email,
