@@ -1,11 +1,15 @@
 import React from 'react';
-import HomePage from './pages/homepage/homepage.component'
-import ShopPage from './pages/shop/shop.component'
 import './App.css';
 import {Route , Switch} from 'react-router-dom'
+import {connect} from 'react-redux'
+
+
+
+import {auth,createUserProfileDocument} from './firebase/firebase.utils'
+import ShopPage from './pages/shop/shop.component'
+import HomePage from './pages/homepage/homepage.component'
 import Header from './components/header/header.component'
 import SignInSignOutPage from './components/sign-in-and-sign-up/sign-in-and-sign-up.component'
-import {auth,createUserProfileDocument} from './firebase/firebase.utils'
 
 class App extends React.Component {
   constructor(props){
@@ -46,7 +50,7 @@ class App extends React.Component {
   render(){
     return (
       <div>
-        <Header currentUser = {this.state.currentUser}/> 
+        <Header/> 
         <Switch>
           <Route exact path="/" component={HomePage}></Route>
           <Route path="/shop" component={ShopPage}></Route>
@@ -57,4 +61,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default connect(null)(App);
