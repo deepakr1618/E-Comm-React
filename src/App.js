@@ -4,13 +4,18 @@ import {Route , Switch ,Redirect} from 'react-router-dom'
 import {connect} from 'react-redux'
 
 
-
 import {auth,createUserProfileDocument} from './firebase/firebase.utils'
 import ShopPage from './pages/shop/shop.component'
 import HomePage from './pages/homepage/homepage.component'
 import Header from './components/header/header.component'
 import SignInSignOutPage from './components/sign-in-and-sign-up/sign-in-and-sign-up.component'
-import  {setCurrentUser} from './redux/user/user.actions'
+import CheckoutPage from './components/checkout/checkout.component'
+
+
+import {setCurrentUser} from './redux/user/user.actions'
+import {selectCurrentUser} from './redux/user/user.selectors'
+import {createStructuredSelector} from 'reselect'
+
 
 
 class App extends React.Component {
@@ -47,6 +52,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={HomePage}></Route>
           <Route path="/shop" component={ShopPage}></Route>
+          <Route exact path="/checkout" component={CheckoutPage}></Route>
           <Route exact path="/signin" render={
             ()=>(
                 this.props.currentUser ? 
@@ -61,13 +67,11 @@ class App extends React.Component {
 }
 
 
-const mapStateToProps = ({ user }) => ({
-  currentUser: user.currentUser
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser
 })
 
 
-//SENDS A FUNCTION NAMED setCurrentUser as props to the componenet which can be called to dispatch
-//to set current user!!HOLY BALLS
 const mapDispatchToProps = dispatch => ({
   setCurrentUser : user => dispatch(setCurrentUser(user))
 })

@@ -4,9 +4,8 @@ import CustomButton from '../custom-button/custom-button.component'
 import {connect} from 'react-redux'
 import {addItemToCart} from '../../redux/cart/cart.actions'
 
-const CollectionItem =  ({ item, addItemDispatch }) =>{
-    console.log(item)
-    const { name, price, imageUrl} = item
+const CollectionItem =  ({ cartItems, addItemDispatch }) =>{
+    const { name, price, imageUrl} = cartItems
     return(
         <div className="collection-item">
         <div
@@ -23,7 +22,7 @@ const CollectionItem =  ({ item, addItemDispatch }) =>{
                 {price}
             </span>
         </div>
-        <CustomButton inverted onClick={()=>{addItemDispatch(item)}}> Add to Cart</CustomButton>
+        <CustomButton inverted onClick={()=>{addItemDispatch(cartItems)}}> Add to Cart</CustomButton>
     </div>
     )
 }
