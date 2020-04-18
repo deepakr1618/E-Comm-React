@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/E-Comm-React/static/css/main.ad53a8de.chunk.css",
+    "main.js": "/E-Comm-React/static/js/main.22626421.chunk.js",
+    "main.js.map": "/E-Comm-React/static/js/main.22626421.chunk.js.map",
+    "runtime-main.js": "/E-Comm-React/static/js/runtime-main.a7799ad8.js",
+    "runtime-main.js.map": "/E-Comm-React/static/js/runtime-main.a7799ad8.js.map",
+    "static/js/2.c9dd92fa.chunk.js": "/E-Comm-React/static/js/2.c9dd92fa.chunk.js",
+    "static/js/2.c9dd92fa.chunk.js.map": "/E-Comm-React/static/js/2.c9dd92fa.chunk.js.map",
+    "index.html": "/E-Comm-React/index.html",
+    "precache-manifest.2590879cf5d1c42980d0b0d4b5ed9436.js": "/E-Comm-React/precache-manifest.2590879cf5d1c42980d0b0d4b5ed9436.js",
+    "service-worker.js": "/E-Comm-React/service-worker.js",
+    "static/css/main.ad53a8de.chunk.css.map": "/E-Comm-React/static/css/main.ad53a8de.chunk.css.map",
+    "static/js/2.c9dd92fa.chunk.js.LICENSE.txt": "/E-Comm-React/static/js/2.c9dd92fa.chunk.js.LICENSE.txt",
+    "static/media/cart.30f07071.svg": "/E-Comm-React/static/media/cart.30f07071.svg",
+    "static/media/original.ed28accb.svg": "/E-Comm-React/static/media/original.ed28accb.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a7799ad8.js",
+    "static/js/2.c9dd92fa.chunk.js",
+    "static/css/main.ad53a8de.chunk.css",
+    "static/js/main.22626421.chunk.js"
+  ]
+}
