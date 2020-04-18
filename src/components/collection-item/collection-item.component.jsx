@@ -3,6 +3,7 @@ import './collection-item.styles.scss'
 import CustomButton from '../custom-button/custom-button.component'
 import {connect} from 'react-redux'
 import {addItemToCart} from '../../redux/cart/cart.actions'
+import AddShoppingCartRoundedIcon from '@material-ui/icons/AddShoppingCartRounded';
 
 const CollectionItem =  ({ cartItems, addItemDispatch }) =>{
     const { name, price, imageUrl} = cartItems
@@ -22,7 +23,13 @@ const CollectionItem =  ({ cartItems, addItemDispatch }) =>{
                 {price}
             </span>
         </div>
-        <CustomButton inverted onClick={()=>{addItemDispatch(cartItems)}}> Add to Cart</CustomButton>
+        <CustomButton inverted onClick={()=>{addItemDispatch(cartItems)}}> Add to Cart
+        <AddShoppingCartRoundedIcon
+        style={{
+            marginLeft:"10px",
+            transform: "scale(0.9)"
+        }}></AddShoppingCartRoundedIcon>
+        </CustomButton>
     </div>
     )
 }

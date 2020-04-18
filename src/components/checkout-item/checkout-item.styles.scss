@@ -1,14 +1,14 @@
 .checkout-item {
     width: 100%;
     display: flex;
-    min-height: 100px;
+    height: 100px;
     border-bottom: 1px solid darkgrey;
     padding: 15px 0;
     font-size: 20px;
     align-items: center;
   
     .image-container {
-      width: 23%;
+      width:8%;
       padding-right: 15px;
   
       img {
@@ -17,13 +17,14 @@
       }
     }
     .name,
-    .quantity,
     .price {
-      width: 23%;
+      width: 28%;
+      text-align: center;
     }
   
     .quantity {
-      padding-left: 20px;
+      width:27%;
+      padding-left: 95px;
       display:flex;
       .arrow{
         cursor: pointer;  
